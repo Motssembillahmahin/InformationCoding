@@ -1,0 +1,45 @@
+Lempel Ziv Coding-
+1. It is accomplished by deviding data into segments.
+2. These segments are shortest sequence not connected previously.
+3. All segments reffered as phrase.
+4. we encode phrase by prefix and last bit.
+5. Symbol 
+ A --- 0
+ B --- 1
+
+Hamming Code -
+They are the first class of linear codes devised for error control.
+Hamming code are (n, k) codes with the following properties.
+i) n = 2^q - 1, q = no. of Parity bits(n-k)
+ii) k = 2^q - q - 1, k = no. of info bits
+iii) minimum no of Parity bits = 3
+
+Decode:
+
+Received Word V = (v1,v2,v3,v4,v5, v6,v7)
+For error checking, 3 parity check sum is used.
+i) s1 = (v1 + v2 + v3) + v5 - 0
+ii) s2 = (v2 + v3 + v4) + v6 - 0
+iii) s3 = (v1 + v2 + v4) + v7 - 1
+
+Error Syndrome, S = (s1, s2, s3)
+S =(001)
+Have to make a table accordig to error pattern .
+
+Binary symmetric channel -
+A binary symmetric channel (or BSCp) is a common communications channel model used in coding theory and information theory. In this model, a transmitter wishes to send a bit (a zero or a one), and the receiver will receive a bit. The bit will be "flipped" with a "crossover probability" of p, and otherwise is received correctly. This model can be applied to varied communication channels such as telephone lines or disk drive storage.
+
+Channel Capacity-
+formula -
+c = B log2(1 + S/N)
+Basically if we increase B then noise N will also increase.so capacity of channel can not be definite.
+if n/2 is power density then
+N = nB
+The channel capacity of the binary symmetric channel, in bits
+Cbsc = 1 - Hb(p)
+where Hb(p) is the binary entropy function,
+Hb(x) = xlog2(1/x) + (1-x)log2 1/(1-x)
+
+conditional entropy 
+In information theory, the conditional entropy quantifies the amount of information needed to describe the outcome of a random variable Y given that the value of another random variable 
+ X is known. Here, information is measured in shannons, nats, or hartleys.
